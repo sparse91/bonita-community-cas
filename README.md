@@ -32,4 +32,8 @@ CAS integration for bonita community 7.7.4
 
 6. `setup/setup.sh push`
 
-7. Compile and copy this project to `server/webapps/bonita/WEB-INF/lib`.
+7. Add `console-common-7.7.4.jar` and `console-server-7.7.4.jar` from `server/webapps/bonita/WEB-INF/lib` to your local maven repo. See `pom.xml` comments.
+
+8. Compile and copy this project jar to `server/webapps/bonita/WEB-INF/lib`.
+
+9. Open `https://your.bonita.server/bonita/cas`.
