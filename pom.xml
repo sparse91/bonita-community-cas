@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mybonita</groupId>
+    <artifactId>cas</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bonitasoft.engine</groupId>
+            <artifactId>bonita-server</artifactId>
+            <version>7.7.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jasig.cas.client</groupId>
+            <artifactId>cas-client-core</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <!-->mvn install:install-file -Dfile=/path/to/console-common-7.7.4.jar -DgroupId=com.mybonita -DartifactId=bonita-console-common -Dversion=7.7.4 -Dpackaging=jar</-->
+        <dependency>
+            <groupId>com.mybonita</groupId>
+            <artifactId>bonita-console-common</artifactId>
+            <version>7.7.4</version>
+        </dependency>
+        <!-->mvn install:install-file -Dfile=/path/to/console-server-7.7.4.jar -DgroupId=com.mybonita -DartifactId=bonita-console-server -Dversion=7.7.4 -Dpackaging=jar</-->
+        <dependency>
+            <groupId>com.mybonita</groupId>
+            <artifactId>bonita-console-server</artifactId>
+            <version>7.7.4</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
