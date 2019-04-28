@@ -28,12 +28,14 @@ CAS integration for bonita community 7.7.4
 
 4. Add `authentication.service.ref.name=casAuthenticationService` to `setup/platform_conf/current/tenants/1/tenant_engine/bonita-tenant-community-custom.properties` and `setup/platform_conf/current/tenant_template_engine/bonita-tenant-community-custom.properties`.
 
-5. Add `auth.AuthenticationManager = com.mybonita.cas.CASAuthenticationManagerImpl` to `setup/platform_conf/current/tenant_template_portal/authenticationManager-config.properties` and `setup/platform_conf/current/tenants/1/tenant_portal/authenticationManager-config.properties`.
+5. Add `<bean id="casAuthenticationService" class="com.mybonita.cas.CASAuthenticationService"/>` to `setup/platform_conf/current/tenant_template_engine/bonita-tenants-custom.xml` and `setup/platform_conf/current/tenants/1/tenant_engine/bonita-tenants-custom.xml:`.
 
-6. `setup/setup.sh push`
+6. Add `auth.AuthenticationManager = com.mybonita.cas.CASAuthenticationManagerImpl` to `setup/platform_conf/current/tenant_template_portal/authenticationManager-config.properties` and `setup/platform_conf/current/tenants/1/tenant_portal/authenticationManager-config.properties`.
 
-7. Add `console-common-7.7.4.jar` and `console-server-7.7.4.jar` from `server/webapps/bonita/WEB-INF/lib` to your local maven repo. See `pom.xml` comments.
+7. `setup/setup.sh push`
 
-8. Compile and copy this project jar to `server/webapps/bonita/WEB-INF/lib`.
+8. Add `console-common-7.7.4.jar` and `console-server-7.7.4.jar` from `server/webapps/bonita/WEB-INF/lib` to your local maven repo. See `pom.xml` comments.
 
-9. Open `https://your.bonita.server/bonita/cas`.
+9. Compile and copy this project jar to `server/webapps/bonita/WEB-INF/lib`.
+
+10. Open `https://your.bonita.server/bonita/cas`.
