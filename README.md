@@ -21,6 +21,7 @@ CAS integration for bonita community 7.7.4
     <filter-mapping>
         <filter-name>CAS Authentication Filter</filter-name>
         <url-pattern>/cas</url-pattern>
+        <url-pattern>/login.jsp</url-pattern>
     </filter-mapping>
 ```
 
